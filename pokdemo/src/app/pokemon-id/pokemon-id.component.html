@@ -1,0 +1,16 @@
+
+<p>pokemon-id works!</p>
+<div class="pokemon-title">
+<p class="pokemon-text" >
+  #{{ pokemon.id }} - {{ pokemon.name | uppercase }}
+</p>
+</div>
+<div class="pokemon-information">
+  <p>STATISTIQUE :</p>
+  <p>HP : {{ pokemon.stats[0] }}</p>
+  <p>ATK : {{ pokemon.stats[1] }}</p>
+  <p>DEF : {{ pokemon.stats[2] }}</p>
+  <p>SATK : {{ pokemon.stats[3] }}</p>
+  <p>SDEF : {{ pokemon.stats[4] }}</p>
+  <p>SPEED : {{ pokemon.stats[5] }}</p>
+</div>

@@ -1,0 +1,22 @@
+.pokemon-title {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  background-color: #555555;
+  color: white;
+  height: 100px;
+}
+.pokemon-information {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  background-color: #eeeeee;
+  padding-bottom: 20px;
+}
+
+.pokemon-text {
+  text-align: left;
+  font-size: 2em;
+  margin: auto;
+  vertical-align: middle;
+}

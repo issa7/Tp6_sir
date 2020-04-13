@@ -1,0 +1,29 @@
+<p>issa-bak works!</p>
+<label> input1 </label>
+<input [(ngModel)]="id" >
+<label>input2</label>
+<input disabled  [(ngModel)]="id">
+
+
+<input disabled [(ngModel)]="selection" >
+
+<select [(ngModel)]="selection">
+    <option *ngFor="let pokemon of list_pokemons" [value]="pokemon.name">  {{pokemon.name}}  </option>
+</select>
+
+
+
+<input
+  class="input-filter" [(ngModel)]="searchTerm" placeholder="Search a pokemon (name)"
+/>
+<select class="input-filter" [(ngModel)]="id_select">
+  <option
+    *ngFor="let pokemon of (list_pokemons | filterPokemonPipe : 'name' : searchTerm)"
+    value="{{ pokemon.id }}"
+    (click)="onSelect(pokemon)">{{ pokemon.id }} : {{ pokemon.name }}</option>
+</select>
+      <button [disabled]="id_select === undefined" (click)="codeToExecute()">Go</button>
+
+<div class="description-pokemons">
+  <app-pokemon-id [pokemon]="selectPokemon"></app-pokemon-id>
+</div>
